@@ -1,21 +1,35 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Posts from "../components/Posts.vue"
+import { createRouter, createWebHashHistory } from 'vue-router'
 import HomePage from '../components/HomePage.vue'
+import About from '../components/About.vue'
+import Services from '../components/Services.vue'
+import Customers from '../components/Customers.vue'
+
+const routes = [
+  {
+    path: '/',
+    name: 'Home Page',
+    component: HomePage
+  },
+  {
+    path: '/About',
+    name: 'About us',
+    component: About
+  },
+  {
+    path: '/Services',
+    name: 'Our Services',
+    component: Services
+  },
+  {
+    path: '/Customers',
+    name: 'Our Customers',
+    component: Customers
+  }
+]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'Home Page',
-      component: HomePage
-    },
-    {
-      path: '/posts',
-      name: 'posts',
-      component: Posts
-    },
-  ]
+  history: createWebHashHistory(),
+  routes
 })
 
 export default router

@@ -1,9 +1,11 @@
 <script setup>
-import Weather from './Weather.vue'
+import Time from './Time.vue'
+import Temperature from './Temperature.vue'
 </script>
 
 <template>
   <div class="wrapper">
-    <Weather />
+    <Time />
+    <Temperature />
   </div>
 </template>
